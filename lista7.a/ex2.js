@@ -1,8 +1,10 @@
 function calcula1220(matriz){
-    let qtde
+    let qtde = 0
     for(let i=0;i<2;i++){
+        matriz[i] = []
          qtde = 0
          for(let j=0;j<4;j++){
+                matriz[i][j] = parseInt((Math.random()*20)+1)
              if (matriz[i][j] >= 12 && matriz[i][j] <= 20){
                  qtde++
              } 
@@ -11,3 +13,10 @@ function calcula1220(matriz){
     }
    
  }
+ let principal = () => {
+    let matriz = []
+   
+    calcula1220(matriz)
+    console.log(matriz)
+}
+principal()
